@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="7104c1efe56c5195efcda4032c2c9c96e0a5f22f" type="tarbxz">ftp://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.11.4.tar.xz</Archive>
+        <Archive sha1sum="7104c1efe56c5195efcda4032c2c9c96e0a5f22f" type="tarxz">ftp://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.11.4.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
