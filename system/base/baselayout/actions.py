@@ -13,7 +13,7 @@ def install():
     # Install everything
     pisitools.insinto("/", "root/*")
 
-    for dire in ["/tmp", "/var/tmp", "/dev", "/lib64", "/proc", "/sys", "/run/lock", "/root", "/home", "/run"]:
+    for dire in ["/tmp", "/var/tmp", "/dev", "/usr/lib64", "/lib64", "/proc", "/sys", "/run/lock", "/root", "/home", "/run"]:
 		pisitools.dodir (dire)
 		
     # Adjust permissions
