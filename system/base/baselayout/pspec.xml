@@ -32,6 +32,7 @@
             <Path fileType="data" permanent="true">/srv</Path>
             <Path fileType="data" permanent="true">/tmp</Path>
             <Path fileType="data" permanent="true">/usr</Path>
+            <Path fileType="data" permanent="true">/usr/lib*</Path>
             <Path fileType="data" permanent="true">/var</Path>
             <Path fileType="data" permanent="true">/root</Path>
             <Path fileType="data" permanent="true">/var/run</Path>
