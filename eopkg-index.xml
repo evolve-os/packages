@@ -6563,8 +6563,8 @@
             <Name>libnss</Name>
             <Homepage>http://www.mozilla.org/projects/security/pki/nss/</Homepage>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv2+</License>
             <PartOf>network.base</PartOf>
@@ -6598,7 +6598,7 @@
             <Summary xml:lang="en">Development files for libnss</Summary>
             <Description xml:lang="en">Development files for libnss</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libnss</Dependency>
+                <Dependency release="6">libnss</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/nss/lib*.a</Path>
@@ -6607,6 +6607,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>03-23-2014</Date>
+                <Version>3.14.3</Version>
+                <Comment>Explicitly enable 64-bit</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="5">
                 <Date>05-25-2013</Date>
                 <Version>3.14.3</Version>
@@ -6997,6 +7004,7 @@
             <Archive type="tarbz2" sha1sum="893f9e5ce010d3ebb3fa7e308d105a68789d076b">ftp://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.11.4.tar.bz2</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
+                <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
                 <AdditionalFile target="generate-module-list" permission="0755">scripts/generate-module-list</AdditionalFile>
                 <AdditionalFile target="apply_patches" permission="0755">scripts/apply_patches</AdditionalFile>
                 <AdditionalFile target="create_quilt_tree" permission="0755">scripts/create_quilt_tree</AdditionalFile>
@@ -10508,15 +10516,15 @@
             <Homepage>http://gcc.gnu.org/</Homepage>
             <Packager>
                 <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">GNU Compiler Collection</Summary>
             <Description xml:lang="en">The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, Ada, and Go, as well as libraries for these languages (libstdc++, libgcj,...). GCC was originally written as the compiler for the GNU operating system. The GNU system was developed to be 100% free software, free in the sense that it respects the user&apos;s freedom.</Description>
-            <Archive type="tarbz2" sha1sum="a464ba0f26eef24c29bcd1e7489421117fb9ee35">http://ftp.gnu.org/gnu/gcc/gcc-4.7.2/gcc-4.7.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4e655032cda30e1928fcc3f00962f4238b502169">http://ftp.gnu.org/gnu/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2</Archive>
             <Patches>
-                <Patch level="1">prebuild_changes.patch</Patch>
+                <Patch level="1">0001-Prebuild-changes.patch</Patch>
             </Patches>
             <SourceURI>system/devel/gcc/pspec.xml</SourceURI>
         </Source>
@@ -10557,11 +10565,14 @@
             <Name>libgcc</Name>
             <PartOf>system.base</PartOf>
             <Files>
-                <Path fileType="library">/usr/lib/libgcc*</Path>
-                <Path fileType="library">/usr/lib/libitm*</Path>
-                <Path fileType="library">/usr/lib/libquadmath*</Path>
-                <Path fileType="library">/usr/lib/libssp*</Path>
-                <Path fileType="library">/usr/lib/libmudflap*</Path>
+                <Path fileType="library">/usr/lib64/libgcc*</Path>
+                <Path fileType="library">/usr/lib64/libasan*</Path>
+                <Path fileType="library">/usr/lib64/libtsan*</Path>
+                <Path fileType="library">/usr/lib64/libatomic*</Path>
+                <Path fileType="library">/usr/lib64/libitm*</Path>
+                <Path fileType="library">/usr/lib64/libquadmath*</Path>
+                <Path fileType="library">/usr/lib64/libssp*</Path>
+                <Path fileType="library">/usr/lib64/libmudflap*</Path>
             </Files>
         </Package>
         <Package>
@@ -10571,7 +10582,7 @@
                 <Dependency>libgcc</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/lib*++*</Path>
+                <Path fileType="library">/usr/lib64/lib*++*</Path>
                 <Path fileType="localedata">/usr/share/locale/*/LC_MESSAGES/cpplib.mo</Path>
                 <Path fileType="localedata">/usr/share/locale/*/LC_MESSAGES/libstdc++.mo</Path>
             </Files>
@@ -10583,7 +10594,7 @@
                 <Dependency>libgcc</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/libgomp*</Path>
+                <Path fileType="library">/usr/lib64/libgomp*</Path>
             </Files>
         </Package>
         <Package>
@@ -10593,11 +10604,18 @@
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/*fortran*</Path>
-                <Path fileType="library">/usr/lib/*fortran*</Path>
+                <Path fileType="library">/usr/lib64/*fortran*</Path>
                 <Path fileType="man">/usr/share/man/*/*fortran*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>03-22-2014</Date>
+                <Version>4.8.1</Version>
+                <Comment>Update to 4.8.1 for toolchain</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>04-03-2013</Date>
                 <Version>4.7.2</Version>
@@ -11027,13 +11045,13 @@
             <Homepage>http://gnu.org/</Homepage>
             <Packager>
                 <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic.</Summary>
             <Description xml:lang="en">The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic.</Description>
-            <Archive type="tarxz" sha1sum="cc272972435b1b7fccabf5797095ef75a181bad1">http://ftp.gnu.org/gnu/gmp/gmp-5.1.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="980426a6ef54d4fff2e67ab970a432251ee2c3a1">http://ftp.gnu.org/gnu/gmp/gmp-5.1.2.tar.xz</Archive>
             <SourceURI>system/devel/gmp/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -11047,6 +11065,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>03-22-2013</Date>
+                <Version>5.1.2</Version>
+                <Comment>Update for toolchain</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>03-25-2013</Date>
                 <Version>5.1.1</Version>
@@ -11104,15 +11129,15 @@
             <Homepage>http://gnu.org/</Homepage>
             <Packager>
                 <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">The Binutils package contains a linker, an assembler, and other tools for handling object files.</Summary>
             <Description xml:lang="en">The Binutils package contains a linker, an assembler, and other tools for handling object files.</Description>
-            <Archive type="tarbz2" sha1sum="587fca86f6c85949576f4536a90a3c76ffc1a3e1">http://ftp.gnu.org/gnu/binutils/binutils-2.23.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="042c51073205ebaf88c272d6168f9deb71984b56">http://ftp.gnu.org/gnu/binutils/binutils-2.23.2.tar.bz2</Archive>
             <Patches>
-                <Patch level="1">binutils-2.23.1-testsuite_fix-1.patch</Patch>
+                <Patch level="1">0001-Fix-texinfo-build-issues.patch</Patch>
             </Patches>
             <SourceURI>system/devel/binutils/pspec.xml</SourceURI>
         </Source>
@@ -11122,12 +11147,27 @@
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib64</Path>
                 <Path fileType="info">/usr/share/info</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>03-24-2014</Date>
+                <Version>2.23.2</Version>
+                <Comment>Use ld.gold as the default linker</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>03-22-2014</Date>
+                <Version>2.23.2</Version>
+                <Comment>Toolchain update</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>03-25-2013</Date>
                 <Version>2.23.1</Version>
@@ -11568,8 +11608,8 @@
             <Name>pkg-config</Name>
             <Homepage>http://www.freedesktop.org/wiki/Software/pkg-config</Homepage>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv2+</License>
             <PartOf>system.devel</PartOf>
@@ -11588,6 +11628,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>03-23-2014</Date>
+                <Version>0.28</Version>
+                <Comment>Drop multiarch voodoo</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>03-26-2013</Date>
                 <Version>0.28</Version>
@@ -12357,13 +12404,9 @@
             <License>GPLv2</License>
             <IsA>app:console</IsA>
             <PartOf>system.base</PartOf>
-            <Summary xml:lang="en">PISI is the package management system of Pardus</Summary>
+            <Summary xml:lang="en">PISI</Summary>
             <Description xml:lang="en">PISI is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-            <Archive type="tarxz" sha1sum="63255a16754408a825df39b177a29fe16235b47e">http://solusos.com/sources/pisi-3.0.tar.xz</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="pisi.conf-i686" permission="0644">pisi.conf-i686</AdditionalFile>
-                <AdditionalFile target="pisi.conf-x86_64" permission="0644">pisi.conf-x86_64</AdditionalFile>
-            </AdditionalFiles>
+            <Archive type="tarxz" sha1sum="ecbe114cba453c0ec50bcb2111ea88366789cb63">http://evolve-os.com/sources/pisi-3.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>python</Dependency>
                 <Dependency>db5</Dependency>
@@ -12371,12 +12414,6 @@
                 <Dependency>python-urlgrabber</Dependency>
                 <Dependency>python-pycurl</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">fix_non_ascii_filenames.patch</Patch>
-                <Patch level="1">accept_different_date_formats.patch</Patch>
-                <Patch level="1">binman_history_support.patch</Patch>
-                <Patch level="1">waftools.patch</Patch>
-            </Patches>
             <SourceURI>system/base/pisi/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -12394,7 +12431,7 @@
                 <Path fileType="library">/usr/lib/python*</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="config">/etc/pisi</Path>
+                <Path fileType="config">/etc/eopkg</Path>
                 <Path fileType="data">/usr/share/mime/packages</Path>
             </Files>
             <Provides>
@@ -12402,12 +12439,19 @@
                 <COMAR script="manager.py">System.Manager</COMAR>
             </Provides>
             <AdditionalFiles>
-                <AdditionalFile target="/etc/pisi/mirrors.conf" permission="0644" owner="root">mirrors.conf</AdditionalFile>
-                <AdditionalFile target="/etc/pisi/sandbox.conf" permission="0644" owner="root">sandbox.conf</AdditionalFile>
+                <AdditionalFile target="/etc/eopkg/mirrors.conf" permission="0644" owner="root">mirrors.conf</AdditionalFile>
+                <AdditionalFile target="/etc/eopkg/sandbox.conf" permission="0644" owner="root">sandbox.conf</AdditionalFile>
                 <AdditionalFile target="/usr/share/mime/packages/pisi.xml" permission="0644" owner="root">pisi.xml</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="12">
+                <Date>03-23-2014</Date>
+                <Version>3.0</Version>
+                <Comment>Use our own Evolve OS PiSi (eopkg) source for now</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="11">
                 <Date>09-09-2013</Date>
                 <Version>3.0</Version>
@@ -12492,8 +12536,8 @@
             <Name>libnspr</Name>
             <Homepage>http://www.mozilla.org</Homepage>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>MPL-1.1</License>
             <License>GPLv2+</License>
@@ -12517,7 +12561,7 @@
             <Description xml:lang="en">Development files required to build applications using the Netscape Portable Runtime</Description>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">libnspr</Dependency>
+                <Dependency release="3">libnspr</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -12526,6 +12570,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>03-23-2011</Date>
+                <Version>4.9.6</Version>
+                <Comment>Explicitly enable 64-bit</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>08-10-2013</Date>
                 <Version>4.9.6</Version>
@@ -12689,7 +12740,6 @@
             timeout touch tr true truncate tsort tty uname unexpand uniq unlink
             users vdir wc who whoami yes</Description>
             <Archive type="tarxz" sha1sum="3fba93c72fab62f3742fe50957d3a86d4cd08176">http://ftp.gnu.org/gnu/coreutils/coreutils-8.21.tar.xz</Archive>
-            <SupportsClang>true</SupportsClang>
             <Patches>
                 <Patch level="1">coreutils-8.21-i18n-1.patch</Patch>
             </Patches>
@@ -12859,16 +12909,12 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Manages system configuration</Summary>
             <Description xml:lang="en">PiSi packages are packaged with small scripts which configures them to entegrate with system and each other. Çomar is the tool which manages and executes these scripts.</Description>
-            <Archive type="tarbz2" sha1sum="a0894a20d3c2bb5843de7e25fc98707baf554df1">http://ng.solusos.com/sources/comar-3.0.3.tar.bz2</Archive>
+            <Archive type="tarxz" sha1sum="9ea747d6b9eb424332dd09dec08eaec3a74e1cb4">http://evolve-os.com/sources/comar-3.0.3.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>python</Dependency>
                 <Dependency>libnettle-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">fix-flags.patch</Patch>
-                <Patch level="1">update-system-manager-model.patch</Patch>
-            </Patches>
             <SourceURI>system/base/comar/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -13175,16 +13221,16 @@
     <SpecFile>
         <Source>
             <Name>baselayout</Name>
-            <Homepage>http://www.solusos.com/</Homepage>
+            <Homepage>http://www.evolve-os.com/</Homepage>
             <Packager>
                 <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv2</License>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Filesystem baselayout</Summary>
-            <Description xml:lang="en">baselayout creates the SolusOS main filesystem hierarchy.</Description>
-            <Archive type="targz" sha1sum="949522c77bc82bb61f5eec92df1833ffe0c2b66c">http://ng.solusos.com/sources/baselayout-1.5.tar.gz</Archive>
+            <Description xml:lang="en">baselayout creates the Evolve OS main filesystem hierarchy.</Description>
+            <Archive type="targz" sha1sum="a8878efb68feb79860656b011ca79b58ca12ae64">http://evolve-os.com/sources/baselayout-1.6.tar.gz</Archive>
             <SourceURI>system/base/baselayout/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -13205,14 +13251,17 @@
                 <Path fileType="data" permanent="true">/srv</Path>
                 <Path fileType="data" permanent="true">/tmp</Path>
                 <Path fileType="data" permanent="true">/usr</Path>
+                <Path fileType="data" permanent="true">/usr/lib*</Path>
                 <Path fileType="data" permanent="true">/var</Path>
                 <Path fileType="data" permanent="true">/root</Path>
+                <Path fileType="data" permanent="true">/var/run</Path>
+                <Path fileType="data" permanent="true">/var/lock</Path>
             </Files>
             <Provides>
                 <COMAR script="package.py">System.Package</COMAR>
             </Provides>
             <AdditionalFiles>
-                <AdditionalFile target="/etc/solusos-release" permission="0644" owner="root">solusos-release</AdditionalFile>
+                <AdditionalFile target="/etc/evolveos-release" permission="0644" owner="root">evolveos-release</AdditionalFile>
                 <AdditionalFile target="/etc/os-release" permission="0644" owner="root">os-release</AdditionalFile>
                 <AdditionalFile target="/etc/services" permission="0644" owner="root">services</AdditionalFile>
                 <AdditionalFile target="/etc/protocols" permission="0644" owner="root">protocols</AdditionalFile>
@@ -13220,6 +13269,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="11">
+                <Date>03-23-2014</Date>
+                <Version>1.6</Version>
+                <Comment>Update for Evolve OS</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="10">
                 <Date>09-09-2013</Date>
                 <Version>1.5</Version>
@@ -13389,13 +13445,13 @@
             <Name>comar-api</Name>
             <Packager>
                 <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv2</License>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Utility functions for Comar scripts</Summary>
             <Description xml:lang="en">Generic utility library for common Comar script operations.</Description>
-            <Archive type="targz" sha1sum="80afa9f07cd15b9042cce9c1b8f1c4dcd457c552">http://ng.solusos.com/sources/comar-api-2.4.9.tar.gz</Archive>
+            <Archive type="targz" sha1sum="74202847119528e47a9539837448a51e85411f96">http://evolve-os.com/sources/comar-api-2.4.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python</Dependency>
             </BuildDependencies>
@@ -13415,7 +13471,14 @@
             </Files>
         </Package>
         <History>
-            <Update release="1">
+            <Update release="3">
+                <Date>03-23-2014</Date>
+                <Version>2.4.7</Version>
+                <Comment>Drop back to 2.4.7</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
+            <Update release="2">
                 <Date>05-24-2013</Date>
                 <Version>2.4.9</Version>
                 <Comment>Fix date for pisi</Comment>
@@ -14159,7 +14222,7 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Python XML API based on the iksemel library.</Summary>
             <Description xml:lang="en">Python XML API based on the iksemel library.</Description>
-            <Archive type="tarxz" sha1sum="5bc6e2a02fba2bcdf82780ea71c1a233e8b580c1">http://solusos.com/dev/piksemel-1.3.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="70b2f921d78879ee379327247d428dfaa9256af0">http://evolve-os.com/sources/piksemel-1.3.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>python</Dependency>
             </BuildDependencies>
@@ -14298,10 +14361,12 @@
             <Name>glibc</Name>
             <Files>
                 <Path fileType="library">/lib</Path>
+                <Path fileType="library">/lib64</Path>
                 <Path fileType="executable">/sbin</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="executable">/usr/sbin</Path>
                 <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib64</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="info">/usr/share/info</Path>
                 <Path fileType="data">/usr/share/i18n/charmaps</Path>
@@ -14587,7 +14652,7 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Certificate Authority Files</Summary>
             <Description xml:lang="en">The Public Key Inrastructure is used for many security issues in a Linux system. In order for a certificate to be trusted, it must be signed by a trusted agent called a Certificate Authority (CA)</Description>
-            <Archive type="binary" sha1sum="a62a0cb15d36b2d4da771625f4b17c46c06b3ebd">http://solusos.com/dev/README</Archive>
+            <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">http://evolve-os.com/dev/README</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="build_certs.sh" permission="0755">build_certs.sh</AdditionalFile>
                 <AdditionalFile target="make-ca.sh" permission="0755">make-ca.sh</AdditionalFile>
@@ -14614,6 +14679,13 @@
             </Provides>
         </Package>
         <History>
+            <Update release="5">
+                <Date>03-22-2013</Date>
+                <Version>1.87</Version>
+                <Comment>Update URI for new bootstrap</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="4">
                 <Date>05-25-2013</Date>
                 <Version>1.87</Version>
@@ -15150,8 +15222,8 @@
         <Source>
             <Name>libffi</Name>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>MIT</License>
             <PartOf>system.base</PartOf>
@@ -15166,7 +15238,7 @@
         <Package>
             <Name>libffi</Name>
             <Files>
-                <Path fileType="library">/usr/lib/*so*</Path>
+                <Path fileType="library">/usr/lib64/*so*</Path>
                 <Path fileType="info">/usr/share/info</Path>
             </Files>
         </Package>
@@ -15176,7 +15248,7 @@
             <Description xml:lang="en">Development files needed to build applications using libffi</Description>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency>libffi</Dependency>
+                <Dependency release="2">libffi</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
@@ -15186,6 +15258,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>03-23-2014</Date>
+                <Version>3.0.12</Version>
+                <Comment>Account for lib64 path</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>03-16-2013</Date>
                 <Version>3.0.12</Version>
@@ -15610,7 +15689,7 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">/proc file system utilities</Summary>
             <Description xml:lang="en">This project provides command line and full screen utilities for browsing procfs, a &quot;pseudo&quot; file system dynamically generated by the kernel to provide information about the status of entries in its process table (such as whether the process is running, stopped, or a &quot;zombie&quot;).</Description>
-            <Archive type="tarxz" sha1sum="65fbeffcdb53072bdee6a137062742db3fd1b7f9">http://solusos.com/sources/procps-ng-3.3.6.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="65fbeffcdb53072bdee6a137062742db3fd1b7f9">http://evolve-os.com/source/procps-ng-3.3.6.tar.xz</Archive>
             <SourceURI>system/base/procps-ng/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -16262,14 +16341,14 @@
             <Name>zlib</Name>
             <Homepage>http://www.zlib.net</Homepage>
             <Packager>
-                <Name>Justin Krehel</Name>
-                <Email>justin@solusos.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>ZLIB</License>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">zlib (Compression library)</Summary>
             <Description xml:lang="en">The zlib library is a compression library that aims to be unobtrusive.</Description>
-            <Archive type="targz" sha1sum="4aa358a95d1e5774603e6fa149c926a80df43559">http://zlib.net/zlib-1.2.7.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a4d316c404ff54ca545ea71a27af7dbc29817088">http://zlib.net/zlib-1.2.8.tar.gz</Archive>
             <Patches>
                 <Patch level="1">no_ldconfig.patch</Patch>
             </Patches>
@@ -16279,6 +16358,7 @@
             <Name>zlib</Name>
             <Files>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib64/lib*.so*</Path>
                 <Path fileType="library">/lib</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -16289,7 +16369,7 @@
             <Summary xml:lang="en">Development files for zlib</Summary>
             <Description xml:lang="en">Development files for zlib</Description>
             <RuntimeDependencies>
-                <Dependency release="4">zlib</Dependency>
+                <Dependency release="6">zlib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -16298,6 +16378,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>03-23-2014</Date>
+                <Version>1.2.8</Version>
+                <Comment>Fix broken symlink - compatibility symlink in lib64 for cmake</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>03-23-2014</Date>
+                <Version>1.2.8</Version>
+                <Comment>Update for toolchain</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="4">
                 <Date>04-15-2013</Date>
                 <Version>1.2.7</Version>
@@ -16670,8 +16764,8 @@
         <Source>
             <Name>pam</Name>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.base</PartOf>
@@ -16689,6 +16783,7 @@
             <Files>
                 <Path fileType="config">/etc</Path>
                 <Path fileType="library">/lib</Path>
+                <Path fileType="library">/lib64</Path>
                 <Path fileType="executable">/sbin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
@@ -16701,13 +16796,20 @@
             <Description xml:lang="en">Development files required to build applications using PAM</Description>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="4">pam</Dependency>
+                <Dependency release="5">pam</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>03-23-2014</Date>
+                <Version>1.1.6</Version>
+                <Comment>Handle lib+lib64 split</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="4">
                 <Date>08-24-2013</Date>
                 <Version>1.1.6</Version>
@@ -17049,17 +17151,17 @@
         <Source>
             <Name>openssl</Name>
             <Packager>
-                <Name>Evolve OS Packaging</Name>
-                <Email>packaging@evolve-os.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Cryptographic tools required by many packages</Summary>
             <Description xml:lang="en">The OpenSSL package contains management tools and libraries relating to cryptography. These are useful for providing cryptography functions to other packages, such as OpenSSH, email applications and web browsers (for accessing HTTPS sites).</Description>
-            <Archive type="targz" sha1sum="3f1b1223c9e8189bfe4e186d86449775bd903460">http://www.openssl.org/source/openssl-1.0.1e.tar.gz</Archive>
+            <Archive type="targz" sha1sum="9ef09e97dfc9f14ac2c042f3b7e301098794fc0f">http://www.openssl.org/source/openssl-1.0.1f.tar.gz</Archive>
             <Patches>
-                <Patch level="1">openssl-1.0.1e-fix_manpages-1.patch</Patch>
-                <Patch level="1">openssl-1.0.0a-ldflags-norpath.patch</Patch>
+                <Patch level="1">openssl-1.0.1f-fix_parallel_build-1.patch</Patch>
+                <Patch level="1">openssl-1.0.1f-fix_pod_syntax-1.patch</Patch>
             </Patches>
             <SourceURI>system/base/openssl/pspec.xml</SourceURI>
         </Source>
@@ -17068,8 +17170,8 @@
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib/engines</Path>
-                <Path fileType="library">/usr/lib/lib*so*</Path>
+                <Path fileType="library">/usr/lib64/engines</Path>
+                <Path fileType="library">/usr/lib64/lib*so*</Path>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
@@ -17078,15 +17180,22 @@
             <Summary xml:lang="en">Development files for openssl</Summary>
             <Description xml:lang="en">Development files required to build applications based on or using OpenSSL</Description>
             <RuntimeDependencies>
-                <Dependency>openssl</Dependency>
+                <Dependency release="4">openssl</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/*.a</Path>
+                <Path fileType="library">/usr/lib64/*.a</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>03-23-2014</Date>
+                <Version>1.0.1</Version>
+                <Comment>Update to 1.0.1f for core system</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey.doherty@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>07-08-2013</Date>
                 <Version>1.0.1</Version>
