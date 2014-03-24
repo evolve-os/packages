@@ -28,3 +28,6 @@ def install():
 	
 	# Include the libiberty header
 	pisitools.insinto ("/usr/include", "../binutils-2.23.2/include/libiberty.h")
+
+	# Use gold by default
+	pisitools.dosym("/usr/bin/x86_64-evolveos-linux-ld.gold", "/usr/bin/ld")
