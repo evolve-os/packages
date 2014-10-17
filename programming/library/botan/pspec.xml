@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>botan</Name>
+        <Homepage>http://botan.randombit.net/</Homepage>
+        <Packager>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Packager>
+        <Summary>Botan is a crypto library for C++</Summary>
+        <Description>It provides useful things like SSL/TLS, X.509 certificates, ECDSA, AES, GCM, and bcrypt, plus a kitchen sink of crypto algorithms of various utility. A third party open source implementation of SSHv2 that uses botan is also available. In addition to C++ you can use (parts of) botan from Python or Perl (both included in tree), or with Node.js.</Description>
+        <License>BSD2</License>
+        <Archive sha1sum="a7ba0be11629143043da078a4c044eac3369b4ec" type="tarbz2">http://files.randombit.net/botan/Botan-1.10.8.tbz</Archive>
+
+        <BuildDependencies>
+
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>botan</Name>
+        <Files>
+		<Path fileType="executable">/bin</Path>
+		<Path fileType="header">/include/botan-1.10/botan</Path>
+		<Path fileType="library">/lib</Path>		
+		<Path fileType="data">/lib/pkgconfig</Path>
+		<Path fileType="docs">/share/doc/botan-1.10.8</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-16-2014</Date>
+            <Version>1.10</Version>
+            <Comment>Add Botan to repositories</Comment>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Update>
+    </History>
+</PISI>
