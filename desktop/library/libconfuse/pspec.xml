@@ -12,9 +12,6 @@
         <Description>C-library for parsing configuration files</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="b3f74f9763e6c9012476dbd323d083af4be34cad" type="targz">http://users.on.net/justin.zobel/confuse-2.7.tar.gz</Archive>
-
-        <BuildDependencies>
-        </BuildDependencies>
     </Source>
 
     <Package>
