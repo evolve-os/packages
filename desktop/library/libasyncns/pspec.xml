@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libasyncns</Name>
+        <Homepage>http://git.0pointer.net/libasyncns.git/</Homepage>
+        <Packager>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Packager>
+        <Summary>Asynchronous Name Service API</Summary>
+        <Description>Asynchronous Name Service API</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="e82843056e98672ae82d46eae2c164cbf0b09ef9" type="targz">http://de-mirror.org/gentoo/distfiles/libasyncns-0.8.tar.gz</Archive>
+
+        <BuildDependencies>
+
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libasyncns</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+	    <Path fileType="library">/usr/lib</Path>
+	    <Path fileType="library">/usr/lib/pkgconfig</Path>
+	    <Path fileType="docs">/usr/share/doc/libasyncns</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-16-2014</Date>
+            <Version>0.8</Version>
+            <Comment>Add libasyncns to repositories</Comment>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Update>
+    </History>
+</PISI>
