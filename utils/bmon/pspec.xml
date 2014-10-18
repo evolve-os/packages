@@ -14,7 +14,7 @@
         <Archive sha1sum="0b9d569c89702d1a6483691829ab0d2c48d849ed" type="targz">http://github.com/tgraf/bmon/archive/v3.5.tar.gz</Archive>
 
         <BuildDependencies>
-		<Dependency>libconfuse-devel</Dependency>
+		<Dependency type="pkgconfig">libconfuse</Dependency>
 		<Dependency>libnl-devel</Dependency>
 		<Dependency>ncurses</Dependency>
         </BuildDependencies>
