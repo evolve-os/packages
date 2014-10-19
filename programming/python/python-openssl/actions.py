@@ -9,10 +9,6 @@ def build():
     pythonmodules.compile()
 
 
-#def check():
-#    pythonmodules.compile("test")
-
-
 def install():
     pythonmodules.install()
 
