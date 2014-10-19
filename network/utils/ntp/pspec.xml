@@ -32,7 +32,8 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/libexec</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/ntp</Path>
         </Files>
     </Package>
 
