@@ -12,10 +12,6 @@
         <Description>Asynchronous Name Service API</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="e82843056e98672ae82d46eae2c164cbf0b09ef9" type="targz">http://de-mirror.org/gentoo/distfiles/libasyncns-0.8.tar.gz</Archive>
-
-        <BuildDependencies>
-
-        </BuildDependencies>
     </Source>
 
     <Package>
