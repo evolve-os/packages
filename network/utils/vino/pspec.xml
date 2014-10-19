@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vino</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>a VNC server for the GNOME desktop</Summary>
+        <Description>a VNC server for the GNOME desktop</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="ef2af9ef964ccefe8d2ccd2d60e3c15f7347bdd3" type="tarxz">https://download.gnome.org/sources/vino/3.12/vino-3.12.0.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxtst-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vino</Name>
+        <Files>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-29-2014</Date>
+            <Version>3.12.0</Version>
+            <Comment>Add vino to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
