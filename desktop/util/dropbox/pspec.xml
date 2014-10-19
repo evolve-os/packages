@@ -25,7 +25,9 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/nautilus-dropbox</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
