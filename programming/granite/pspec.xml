@@ -27,7 +27,8 @@
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/lib64/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
