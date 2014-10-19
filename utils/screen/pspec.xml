@@ -12,9 +12,6 @@
         <Description>Full-screen window manager that multiplexes a physical terminal</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="21eadf5f1d64120649f3390346253c6bc8a5103c" type="targz">http://ftp.gnu.org/gnu/screen/screen-4.2.1.tar.gz</Archive>
-
-        <BuildDependencies>
-        </BuildDependencies>
     </Source>
 
     <Package>
