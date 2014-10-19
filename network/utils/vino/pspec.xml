@@ -16,10 +16,10 @@
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">sm</Dependency>
             <Dependency type="pkgconfig">x11</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
             <Dependency>libxtst-devel</Dependency>
         </BuildDependencies>
     </Source>
