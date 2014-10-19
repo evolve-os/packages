@@ -15,16 +15,32 @@
     </Source>
 
     <Package>
-        <Name>libasyncns</Name>
+        <Name>libasyncns-devel</Name>
         <Files>
             <Path fileType="header">/usr/include</Path>
-	    <Path fileType="library">/usr/lib</Path>
+	    <Path fileType="library">/usr/lib/lib*.so</Path>
 	    <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libasyncns</Name>
+        <Files>
+	    <Path fileType="library">/usr/lib/lib*.so.*</Path>
+	    <Path fileType="library">/usr/lib/lib*.a</Path>
 	    <Path fileType="docs">/usr/share/doc/libasyncns</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>10-19-2014</Date>
+            <Version>0.8</Version>
+            <Comment>split -devel</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-16-2014</Date>
             <Version>0.8</Version>
