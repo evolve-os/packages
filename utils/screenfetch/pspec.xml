@@ -12,12 +12,6 @@
         <Description>Fetches system/theme information in terminal for Linux desktop screenshots.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="67de84f163056b6f5e8069cc870b2df715ee4dfe" type="targz">http://github.com/KittyKatt/screenFetch/archive/v3.6.2.tar.gz</Archive>
-
-        <BuildDependencies>
-		<Dependency>bash</Dependency>
-		<Dependency>xdpyinfo</Dependency>
-		<Dependency>xorg-xprop</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
@@ -25,6 +19,10 @@
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
+	<RuntimeDependencies>
+		<Dependency>xdpyinfo</Dependency>
+		<Dependency>xorg-xprop</Dependency>
+	</RuntimeDependencies>
     </Package>
 
     <History>
