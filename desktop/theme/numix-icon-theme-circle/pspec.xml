@@ -11,7 +11,7 @@
         <Summary>Numix Circle Icon Theme</Summary>
         <Description>Numix Circle is an icon theme from the Numix project</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="d7c6d1f364472860d2ae3a0b82cf9e328a93ad40" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme-circle/numix-icon-theme-circle_0.2+201407260142~636~ubuntu14.10.1.tar.xz</Archive>
+        <Archive sha1sum="057562f38a246dd59e93fae471773c3c989b0540" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme-circle/numix-icon-theme-circle_0.2+201410252202~659~ubuntu14.10.1.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -25,6 +25,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>28-10-2014</Date>
+            <Version>0.2</Version>
+            <Comment>Update to latest</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="3">
             <Date>08-03-2014</Date>
             <Version>0.2</Version>
