@@ -13,7 +13,8 @@
 coloured background for applications and simplistic devices, toolbars
 and status icons.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="dbb20164c9dd1ba7c76b9bf65144017e1b561189" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+200~201410280046~ubuntu14.10.1.tar.xz</Archive>    </Source>
+        <Archive sha1sum="dbb20164c9dd1ba7c76b9bf65144017e1b561189" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+200~201410280046~ubuntu14.10.1.tar.xz</Archive>
+    </Source>
 
     <Package>
         <Name>numix-icon-theme</Name>
