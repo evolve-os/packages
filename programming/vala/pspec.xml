@@ -11,15 +11,14 @@
         <Summary>Compiler for the GObject type system</Summary>
         <Description>Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="33a71a21e12e80cf1f4e0aa3b6a6523ff38e92c8" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/vala/0.24/vala-0.24.0.tar.xz</Archive>
-    </Source>
+        <Archive sha1sum="0839891fa02ed2c96f0fa704ecff492ff9a9cd24" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/vala/0.26/vala-0.26.1.tar.xz</Archive>
 
     <Package>
         <Name>vala</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/lib/vala-0.24</Path>
-            <Path fileType="data">/usr/share/vala-0.24</Path>
+            <Path fileType="data">/usr/lib/vala-0.26</Path>
+            <Path fileType="data">/usr/share/vala-0.26</Path>
             <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -70,6 +69,13 @@
 
 
     <History>
+        <Update release="8">
+            <Date>28-10-2014</Date>
+            <Version>0.26.1</Version>
+            <Comment>Update to latest stable upstream version</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
         <Update release="7">
             <Date>08-03-2014</Date>
             <Version>0.24.0</Version>
