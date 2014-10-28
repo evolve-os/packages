@@ -12,7 +12,8 @@
         <Description>Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="0839891fa02ed2c96f0fa704ecff492ff9a9cd24" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/vala/0.26/vala-0.26.1.tar.xz</Archive>
-
+    </Source>
+    
     <Package>
         <Name>vala</Name>
         <Files>
