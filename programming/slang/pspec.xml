@@ -11,7 +11,7 @@
         <Summary>Programmers library allowing interactive applications</Summary>
         <Description>S-Lang is a multi-platform programmer's library designed to allow a developer to create robust multi-platform software. It provides facilities required by interactive applications such as display/screen management, keyboard input, keymaps, and so on. The most exciting feature of the library is the slang interpreter that may be easily embedded into a program to make it extensible. It may also be used standalone with the slsh interpreter.</Description>
         <License>GPLv2</License>
-        <Archive sha1sum="75b2c90421d34d54246dfaaffe829b2d33cf733c" type="targz">ftp://space.mit.edu/pub/davis/slang/v2.2/slang-2.2.4.tar.gz</Archive>
+        <Archive sha1sum="c3270b58a58e6cbfd47f0a6e3d2194dd9e7c7d14" type="targz">http://www.jedsoft.org/releases/slang/slang-2.3.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -39,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>10-28-2014</Date>
+            <Version>2.3.0</Version>
+            <Comment>Updated to latest</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="1">
             <Date>06-16-2013</Date>
             <Version>2.2.4</Version>

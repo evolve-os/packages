@@ -11,7 +11,7 @@
         <Summary>patch (patches source files)</Summary>
         <Description> patch takes other "patch" files created between an original and changed version and applies them to original files, producing a changed version.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="8886fe94a4cefaf42678ebeca25f4c012bd0f5dc" type="targz">ftp://ftp.gnu.org/gnu/patch/patch-2.7.tar.gz</Archive>
+        <Archive sha1sum="4ac0fc1a636365be9db252c9340aba7209c60bbe" type="targz">ftp://ftp.gnu.org/gnu/patch/patch-2.7.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -23,6 +23,14 @@
     </Package>
 
     <History>
+            <Update release="2">
+            <Date>10-28-2014</Date>
+            <Version>2.7.1</Version>
+            <Comment>Update to latest</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>2.7</Version>

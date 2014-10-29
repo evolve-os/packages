@@ -16,7 +16,7 @@ def setup():
 
     shelltools.cd (BuildDir)
     # Configure
-    shelltools.system ("../binutils-2.23.2/configure \
+    shelltools.system ("../binutils-2.24/configure \
         --prefix=/usr \
         --enable-lto \
         --enable-multilib \
@@ -33,4 +33,4 @@ def install():
     autotools.rawInstall ("tooldir=/usr DESTDIR=%s" % get.installDIR())
 
     # Include the libiberty header
-    pisitools.insinto ("/usr/include", "../binutils-2.23.2/include/libiberty.h")
+    pisitools.insinto ("/usr/include", "../binutils-2.24/include/libiberty.h")
