@@ -11,7 +11,7 @@
 <Summary>GNOME Devtools Library</Summary>
         <Description>Provides a docking system and several utilities useful to GNOME development tools and GNOME applications in general. Used with inkscape, anjuta, etc</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="7342f127c64e298cd33d90e661d34ecab842e92f" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gdl/3.10/gdl-3.10.0.tar.xz</Archive>
+	<Archive sha1sum="6b2c0d8dcd7b978788e05d9cef59dac7ab7bef97" type="tarxz">ftp://ftp.gnome.org/pub/GNOME/sources/gdl/3.12/gdl-3.12.0.tar.xz</Archive>
 
         <BuildDependencies>
 		<Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -34,7 +34,7 @@
         <Summary>Development files for gdl</Summary>
         <RuntimeDependencies>
 		<Dependency type="pkgconfig">gtk+-3.0</Dependency>
-		<Dependency release="current">gdl</Dependency>
+		<Dependency release="1">gdl</Dependency>
         </RuntimeDependencies>
         <Files>
 		<Path fileType="header">/usr/include</Path>
@@ -52,6 +52,13 @@
     </Package>
 
     <History>
+            <Update release="1">
+            <Date>10-29-2014</Date>
+            <Version>3.12.0</Version>
+            <Comment>Release+dependency correction</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>10-27-2014</Date>
             <Version>3.10.0</Version>
