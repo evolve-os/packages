@@ -11,7 +11,7 @@
         <Summary>libusb (USB library)</Summary>
         <Description> libusb is a C library that gives applications easy access to USB devices on many different operating systems.</Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="025582ff2f6216e2dbc2610ae16b2e073e1b3346" type="tarbz2">http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.9/libusb-1.0.9.tar.bz2/download</Archive>
+        <Archive sha1sum="c5d14ced155233ceeb5107c7eb3b94b16649ae05" type="tarbz2">http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.19/libusb-1.0.19.tar.bz2/download</Archive>
     </Source>
 
     <Package>
@@ -26,6 +26,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>11-01-2014</Date>
+            <Version>1.0.19</Version>
+            <Comment>Update to 1.0.19</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>1.0.9</Version>
