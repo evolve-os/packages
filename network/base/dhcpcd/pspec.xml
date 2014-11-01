@@ -11,7 +11,8 @@
         <Summary>DHCP client and server</Summary>
         <Description> In layman's terms, dhcpcd runs on your machine and silently configures your computer to work on the attached networks without trouble and mostly without configuration. </Description>
         <License>LGPLv3+</License>
-        <Archive sha1sum="2f9f2f432e43181497c4909725e29239c9ff004a" type="tarbz2">http://roy.marples.name/downloads/dhcpcd/dhcpcd-5.6.7.tar.bz2</Archive>
+        <License>LGPLv3+</License>
+        <Archive sha1sum="93c1a071eb406084d0a71c14e5707af4cd453917" type="tarbz2">ftp://roy.marples.name/pub/dhcpcd/dhcpcd-5.6.8.tar.bz2</Archive>
 
         <Patches>
             <Patch level="1">security/cve-2014-6060.patch</Patch>
@@ -35,9 +36,20 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>11-01-2014</Date>
+            <Version>5.6.8</Version>
+            <Comment>Update to 5.6.8</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+            <Requires>
+                <Action package="dhcpcd">systemRestart</Action>
+            </Requires>
+        </Update>
+        
         <Update release="4" type="security">
             <Date>09-12-2014</Date>
-            <Version>5.6.7</Version>
+            <Version>5.6.7</Version>        
             <Comment>Fix metainfo on previous update</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
