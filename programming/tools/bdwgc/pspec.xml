@@ -18,7 +18,7 @@
     <Package>
         <Name>bdwgc</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -29,7 +29,6 @@
         <Description>Development files for bdwgc</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
