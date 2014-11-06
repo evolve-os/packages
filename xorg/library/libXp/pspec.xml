@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libXp</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary>X.org Xp library</Summary>
+        <Description>X.org Xp library</Description>
+        <Archive sha1sum="bac586283c089536e526529de21b13778a428c07" type="tarbz2">ftp://ftp.x.org/pub/individual/lib/libXp-1.0.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>printproto</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libxp</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libxext</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libxp-devel</Name>
+        <Summary>Development files for libXp</Summary>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="library">/usr/lib/libdeprecatedXp.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxp</Dependency>
+            <Dependency>libxext-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>11-06-2014</Date>
+            <Version>1.0.2</Version>
+            <Comment>Add libXp to repositories</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
