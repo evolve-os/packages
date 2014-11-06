@@ -11,6 +11,9 @@
         <Description>The util-macros package contains the m4 macros used by all of the Xorg packages. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="c424a09fa6f628e24eff74496acebef13e8093b9" type="tarbz2">http://xorg.freedesktop.org/releases/individual/util/util-macros-1.17.tar.bz2</Archive>
+        <Patches>
+            <Patch level="1">doc.patch</Patch>
+        </Patches>   
     </Source>
 
     <Package>
@@ -18,12 +21,19 @@
         <Files>
             <Path fileType="header">/usr/share/aclocal</Path>
             <Path fileType="header">/usr/share/pkgconfig</Path>
-            <Path fileType="header">/usr/share/util-macros</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-06-2014</Date>
+            <Version>1.19</Version>
+            <Comment>Update to 1.19 + fix xorg-macros</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="2">
             <Date>07-06-2014</Date>
             <Version>1.17</Version>
