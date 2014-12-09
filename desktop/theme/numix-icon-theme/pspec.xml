@@ -13,7 +13,7 @@
 coloured background for applications and simplistic devices, toolbars
 and status icons.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="89bad818db66150355690ab84338a75a5dd634a5" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+201~201411101616~ubuntu14.10.1.tar.xz</Archive>
+        <Archive sha1sum="859aa1a9d108bfc9662c0f6c0aa682fb28c05f3d" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+241~201411292346~ubuntu14.10.1.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -29,7 +29,7 @@ and status icons.</Description>
     <History>
         <Update release="4">
             <Date>15-11-2014</Date>
-            <Version>0.3.201</Version>
+            <Version>0.3.241</Version>
             <Comment>Update to latest</Comment>
             <Name>Peter Cornelis</Name>
             <Email>poltertec@gmail.com</Email>
