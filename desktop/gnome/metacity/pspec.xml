@@ -10,7 +10,7 @@
         <Summary>GTK+ Window Manager</Summary>
         <Description>Boring window manager for the adult in you. Many window managers are like Marshmallow Froot Loops; Metacity is like Cheerios.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="7b5b20e84ffb86290955a726af946a78b7a45e26" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/metacity/2.34/metacity-2.34.13.tar.xz</Archive>
+        <Archive sha1sum="ba39a603637793667b20872ba5ffdcacc37197b1" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/metacity/3.12/metacity-3.12.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -43,6 +43,8 @@
             <Dependency>libvorbis-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
+            <Dependency>libxft-devel</Dependency>
+            <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -120,6 +122,14 @@
     </Package>
 
     <History>
+    	<Update release="2">
+            <Date>12-09-2014</Date>
+            <Version>3.12.0</Version>
+            <Comment>Update to 3.12</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="1">
             <Date>06-05-2013</Date>
             <Version>2.34.13</Version>
