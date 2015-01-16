@@ -11,7 +11,7 @@
         <Summary>The GLib Networking package contains Network related gio modules for GLib.</Summary>
         <Description>The GLib Networking package contains Network related gio modules for GLib.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="1cc6dcb20b3f5ae3d621a0e4816cfbb6592975db" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/glib-networking/2.40/glib-networking-2.40.1.tar.xz</Archive>
+        <Archive sha1sum="dc882d9c4a1dcb8e7bab9e01ab9e7a6e23efea44" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/glib-networking/2.42/glib-networking-2.42.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">p11-kit-1</Dependency>
@@ -33,6 +33,14 @@
 
 
     <History>
+        <Update release="5">
+            <Date>10-31-2014</Date>
+            <Version>2.42.0</Version>
+            <Comment>Upgrade to 2.42.0 compliant with glib</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="4">
             <Date>07-08-2014</Date>
             <Version>2.40.1</Version>

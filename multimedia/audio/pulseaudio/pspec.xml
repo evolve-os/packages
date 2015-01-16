@@ -11,7 +11,7 @@
         <Summary>Advanced sound system</Summary>
         <Description>PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. It allows you to do advanced operations on your sound data as it passes between your application and your hardware. Things like transferring the audio to a different machine, changing the sample format or channel count and mixing several sounds into one are easily achieved using a sound server.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9f0769dcb25318ba3faaa453fd2ed0c509fa9c5c" type="tarxz">http://freedesktop.org/software/pulseaudio/releases/pulseaudio-4.0.tar.xz</Archive>
+        <Archive sha1sum="e420931a0b9cf37331cd06e30ba415046317ab85" type="tarxz">http://freedesktop.org/software/pulseaudio/releases/pulseaudio-5.0.tar.xz</Archive>
 
         <BuildDependencies>
             <!-- TODO: Enable bluez support //-->
@@ -39,7 +39,7 @@
             <Path fileType="library">/usr/lib/pulse</Path>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
-            <Path fileType="library">/usr/lib/pulse-4.0</Path>
+            <Path fileType="library">/usr/lib/pulse-5.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/pulseaudio</Path>
@@ -68,6 +68,14 @@
     </Package>
 
     <History>
+    	<Update release="6" type="security">
+            <Date>10-31-2014</Date>
+            <Version>5.0</Version>
+            <Comment>Update to 5.0</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="6" type="security">
             <Date>10-18-2014</Date>
             <Version>4.0</Version>

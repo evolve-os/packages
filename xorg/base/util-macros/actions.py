@@ -6,6 +6,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
+    autotools.autoreconf("-vif")
     autotools.configure("--disable-static")
 
 def build():

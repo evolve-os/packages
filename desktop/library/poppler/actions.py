@@ -6,7 +6,15 @@ from pisi.actionsapi import cmaketools, pisitools
 
 
 def setup():
-    cmaketools.configure()
+    autotools.configure ("--disable-static \
+               		--disable-poppler-qt \
+               		--disable-gtk-doc-html \
+               		--disable-zlib \
+               		--disable-gtk-test \
+               		--enable-cairo-output \
+               		--enable-xpdf-headers \
+               		--enable-libjpeg \
+               		--disable-libopenjpeg")
 
 
 def build():
@@ -14,6 +22,6 @@ def build():
 
 
 def install():
-    cmaketools.install()
-
-    pisitools.dodoc("COPYING", "ChangeLog", "AUTHORS")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.removeDir("/usr/share/gtk-doc")
+    pisitools.dodoc("README", "AUTHORS", "ChangeLog", "NEWS", "README-XPDF", "TODO")
