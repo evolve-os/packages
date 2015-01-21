@@ -1,15 +1,22 @@
 #!/usr/bin/python
 
+# Created For Evolve OS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools, shelltools
 
 
 def setup():
-    shelltools.system("ln -s ../libatomic_ops/libatomic_ops-7.4.0 libatomic_ops")
-    autotools.configure("--disable-static")
+    shelltools.system ("rm -rf libtool libtool.m4")
+    autotools.autoreconf("-fi")
+    autotools.configure("--enable-static-libs \
+                         --enable-cplusplus \
+                         --enable-large-config \
+                         --enable-threads=posix \
+                         --with-libatomic-ops=no")
 
 def build():
     autotools.make()
+
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
