@@ -11,7 +11,7 @@
         <Summary>PDF Rendering Library</Summary>
         <Description>PDF Rendering Library</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="26ff3310cb4866829030c73070df4ae9aa4f6cac" type="tarxz">http://poppler.freedesktop.org/poppler-0.26.4.tar.xz</Archive>
+        <Archive sha1sum="12937666faee80bae397a8338a3357e864d77d53" type="tarxz">http://poppler.freedesktop.org/poppler-0.26.5.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">libcurl</Dependency>
@@ -21,6 +21,8 @@
             <Dependency type="pkgconfig" versionFrom="3.8">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">gdk-pixbuf-2.0</Dependency>
             <Dependency type="pkgconfig">lcms2</Dependency>
+            <Dependency>libtiff-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -62,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>01-21-2015</Date>
+            <Version>0.26.5</Version>
+            <Comment>Update to 0.26.5</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+        
         <Update release="1">
             <Date>09-19-2014</Date>
             <Version>0.26.4</Version>
