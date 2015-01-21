@@ -1,19 +1,24 @@
 #!/usr/bin/python
 
-#Created For Evolve OS
+# Created For Evolve OS
 
-from pisi.actionsapi import cmaketools, pisitools
-
+from pisi.actionsapi import autotools, pisitools, shelltools
 
 def setup():
-    cmaketools.configure()
-
+    autotools.autoreconf('-vfi')
+    autotools.configure(" \
+                         --enable-lcms \
+                         --enable-poppler-cairo \
+                         --disable-dependency-tracking \
+                         --with-python \
+                         --with-inkjar \
+                         --enable-nls \
+                         --with-perl")
 
 def build():
-    cmaketools.make()
-
+    autotools.make("-j1")
 
 def install():
-    cmaketools.install()
-
-    pisitools.dodoc("COPYING", "ChangeLog", "AUTHORS")
+    autotools.install()
+    pisitools.remove("/usr/share/icons/hicolor/icon-theme.cache")
+    pisitools.dodoc("AUTHORS", "COPYING", "COPYING.LIB", "ChangeLog", "NEWS", "README")
