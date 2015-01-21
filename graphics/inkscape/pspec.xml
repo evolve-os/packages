@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>inkscape</Name>
+        <Homepage>http://www.inkscape.org</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <Summary>SVG vector graphics application</Summary>
+        <Description>Inkscape is a what you see is what you get Scalable Vector Graphics editor. It is useful for creating, viewing and changing SVG images.</Description>
+        <Archive sha1sum="83ddb0c96069638f712a869039989bfd7d79c6a8" type="tarbz2">mirrors://sourceforge/inkscape/inkscape-0.48.5.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libgtkmm-2-devel</Dependency>
+            <Dependency>libatkmm-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>liblcms2-devel</Dependency>
+            <Dependency>libboost-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>bdwgc-devel</Dependency>
+            <Dependency>perl-xmlparser</Dependency>
+            <Dependency>gvfs-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>popt-devel</Dependency>
+            <Dependency type="pkg-config">poppler-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>gsl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>inkscape</Name>
+        <RuntimeDependencies>
+            <Dependency>libboost</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>bdwgc</Dependency>
+            <Dependency>libgtkmm-2</Dependency>
+            <Dependency>liblcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/inkscape</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-21-2015</Date>
+            <Version>0.48.5</Version>
+            <Comment>Add inkscape to repositories</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
