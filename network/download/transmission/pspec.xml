@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>transmission</Name>
+        <Homepage>http://www.transmissionbt.com/</Homepage>
+        <Packager>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Packager>
+        <Summary>BitTorrent client</Summary>
+        <Description>BitTorrent client</Description>
+        <License>MIT</License>
+        <Archive sha1sum="455359bc1fa34aeecc1bac9255ad0c884b94419c" type="tarxz">https://transmission.cachefly.net/transmission-2.84.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">libsystemd-daemon</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">libevent</Dependency>
+            <Dependency type="pkgconfig">libcurl</Dependency>
+            <Dependency type="pkgconfig">libevent</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>transmission-cli</Name>
+        <Summary>BitTorrent client (CLI tools, daemon and web client)</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/transmission</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RunDependencies>
+            <Dependency type="pkgconfig">libsystemd-daemon</Dependency>
+            <Dependency type="pkgconfig">libevent</Dependency>
+            <Dependency type="pkgconfig">libcurl</Dependency>
+        </RunDependencies>
+    </Package>
+
+    <Package>
+        <Name>transmission-gtk</Name>
+        <Summary>BitTorrent client (GTK+ GUI)</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin/transmission-gtk</Path>
+            <Path fileType="man">/usr/share/man/man1/transmission.1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications/transmission-gtk.desktop</Path>
+        </Files>
+        <RunDependencies>
+            <Dependency type="pkgconfig">libsystemd-daemon</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">libevent</Dependency>
+            <Dependency type="pkgconfig">libcurl</Dependency>
+        </RunDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-27-2015</Date>
+            <Version>2.84</Version>
+            <Comment>Add transmission to repositories</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
