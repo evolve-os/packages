@@ -1,19 +1,20 @@
 #!/usr/bin/python
 
-# Created for SolusOS
+# Created For Evolve OS
 
-from pisi.actionsapi import autotools
-from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
+from pisi.actionsapi import get, autotools, pisitools
+
 
 def setup():
     autotools.rawConfigure("--prefix=/usr")
+
+
 
 def build():
     autotools.make()
 
 
 def install():
-    autotools.rawInstall('DESTDIR=%s' % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("LICENSE","README*")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "LICENSE")
