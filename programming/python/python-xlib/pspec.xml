@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-xlib</Name>
+        <Homepage>http://sourceforge.net/projects/python-xlib</Homepage>
+        <Packager>
+            <Name>Devon Bundy</Name>
+            <Email>devonbundy@gmail.com</Email>
+        </Packager>
+        <Summary>The Python X Library is a complete X11R6 client-side implementation, written in pure Python.</Summary>
+        <Description>It is written entirely in Python, in contrast to earlier X libraries for Python (the ancient X extension and the newer plxlib) which were interfaces to the C Xlib.</Description>
+        <License>GPLv2</License>
+        <Archive sha1sum="e25e3c1284e768d3f84eaebbea4ed3e647c2a05b" type="targz">http://96.47.231.74/mirror/src/python-xlib/python-xlib-0.14.tar.gz</Archive>
+
+        <BuildDependencies>
+		<Dependency type="pkgconfig">python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-xlib</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-29-2015</Date>
+            <Version>0.14</Version>
+            <Comment>Add python-xlib to repositories</Comment>
+            <Name>Devon Bundy</Name>
+            <Email>devonbundy@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
