@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>atom</Name>
+        <Homepage>https://www.atom.io</Homepage>
+        <Packager>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Packager>
+        <Summary>Atom is a hackable text editor for the 21st century</Summary>
+        <Description>built on atom-shell, and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.</Description>
+        <License>MIT</License>
+        <Archive sha1sum="4526d537db0f893b5f5612ef22566e20d397239c" type="binary">https://github.com/atom/atom/releases/download/v0.176.0/atom-amd64.deb</Archive>
+
+        <BuildDependencies>
+            <Dependency>nodejs</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>atom</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/atom</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/lintian</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>nodejs</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-28-2015</Date>
+            <Version>0.176.0</Version>
+            <Comment>Add  to repositories</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
