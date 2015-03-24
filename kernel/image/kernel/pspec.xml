@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="6ae976605aa6dc04bcadcd8f50dbca52342af0a6" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.19.1.tar.gz</Archive>
+        <Archive sha1sum="0687e173a995921d11f689a78acae96f182df76b" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.19.2.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
@@ -74,6 +74,13 @@
     </Package>
 
     <History>
+        <Update release="37">
+            <Date>2015-03-18</Date>
+            <Version>3.19.2</Version>
+            <Comment>Update to latest 3.19.2 stable</Comment>
+            <Name>Dmitry Patsura</Name>
+            <Email>talk@dmtry.me</Email>
+        </Update>
         <Update release="36">
             <Date>03-09-2015</Date>
             <Version>3.19.1</Version>
