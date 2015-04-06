@@ -12,7 +12,7 @@
         <Description>CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.</Description>
         <License>BSD</License>
 
-        <Archive sha1sum="2d868ccc3f9f2aa7c2844bd0a4609d5313edaaec" type="targz">http://www.cmake.org/files/v2.8/cmake-2.8.10.2.tar.gz</Archive>
+        <Archive sha1sum="53c1fe2aaae3b2042c0fe5de177f73ef6f7b267f" type="targz">http://www.cmake.org/files/v3.2/cmake-3.2.1.tar.gz</Archive>
 
     </Source>
 
@@ -34,6 +34,13 @@
     </Package>
 
     <History>
+        <Update release="1">
+            <Date>04-06-2015</Date>
+            <Version>3.2.1</Version>
+            <Comment>Update to cmake 3.2.1</Comment>
+            <Name>Zach Bacon</Name>
+            <Email>wowzaman12@gmaail.com</Email>
+        </Update>
         <Update release="1">
             <Date>04-03-2013</Date>
             <Version>2.8.10</Version>
