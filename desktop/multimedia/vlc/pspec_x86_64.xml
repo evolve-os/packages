@@ -1,0 +1,114 @@
+<PISI>
+    <Source>
+        <Name>vlc</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>LGPL-2.1</License>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Open source multimedia player</Summary>
+        <Description xml:lang="en">VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>vlc</Name>
+        <Summary xml:lang="en">Open source multimedia player</Summary>
+        <Description xml:lang="en">VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
+</Description>
+        <PartOf>desktop.multimedia</PartOf>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/vlc/vlc.ico</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/images</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/dialogs</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/css</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/css/ui-lightness/jquery-ui-1.8.13.custom.css</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/css/ui-lightness/images</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/js</Path>
+            <Path fileType="data">/usr/share/vlc/lua/http/requests</Path>
+            <Path fileType="data">/usr/share/vlc/skins2</Path>
+            <Path fileType="data">/usr/share/vlc/skins2/fonts</Path>
+            <Path fileType="data">/usr/share/vlc/utils</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications/vlc.desktop</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/doc/lua/README.txt</Path>
+            <Path fileType="doc">/usr/share/doc/lua/playlist</Path>
+            <Path fileType="doc">/usr/share/doc/lua/intf</Path>
+            <Path fileType="doc">/usr/share/doc/lua/http/requests/README.txt</Path>
+            <Path fileType="doc">/usr/share/doc/lua/extensions/README.txt</Path>
+            <Path fileType="doc">/usr/share/doc/lua/sd</Path>
+            <Path fileType="doc">/usr/share/doc/lua/meta/fetcher</Path>
+            <Path fileType="doc">/usr/share/doc/lua/meta/reader</Path>
+            <Path fileType="doc">/usr/share/doc/lua/meta/art</Path>
+            <Path fileType="doc">/usr/share/doc/libvlc</Path>
+            <Path fileType="doc">/usr/share/doc/libvlc/QtPlayer</Path>
+            <Path fileType="data">/usr/share/kde4/apps/solid/actions</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/vlc</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/playlist</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/modules</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/intf</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/intf/modules</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/extensions/VLSub.luac</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/sd</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/meta/fetcher/tvrage.luac</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/meta/reader/filename.luac</Path>
+            <Path fileType="library">/usr/lib64/vlc/lua/meta/art</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/plugins.dat</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/video_output</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/video_filter</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/gui</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/lua</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/packetizer</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/visualization</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/video_chroma</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/audio_mixer</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/stream_filter</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/control</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/text_renderer</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/audio_output</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/codec</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/video_splitter</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/access_output</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/audio_filter</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/services_discovery</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/demux</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/meta_engine</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/stream_out</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/mux</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/misc</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/access</Path>
+            <Path fileType="library">/usr/lib64/vlc/plugins/vdpau</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vlc-devel</Name>
+        <Summary xml:lang="en">Development files for vlc</Summary>
+        <Description xml:lang="en">VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">vlc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2015-03-08</Date>
+            <Version>2.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,14 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Created for SolusOS
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--with-curses --disable-static"  )
+    autotools.configure("--with-curses \
+                         --disable-static \
+                         --libdir=/usr/lib64")
+
 def build():
     autotools.make()
 

@@ -10,7 +10,7 @@
         <Summary>The Standard GNOME3 Themes Package</Summary>
         <Description>The GNOME Themes Standard package contains various components of the default GNOME 3 theme.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9e86d5c5f33e21e0da0201c490116ec69719b695" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.14/gnome-themes-standard-3.14.2.tar.xz</Archive>
+        <Archive sha1sum="cb406ff3b4740134dc838108b0165f0789831263" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.14/gnome-themes-standard-3.14.2.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
@@ -34,6 +34,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>03-07-2015</Date>
+            <Version>3.14.2.3</Version>
+            <Comment>Update to 3.14.2.3</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>01-17-2015</Date>
             <Version>3.14.2</Version>

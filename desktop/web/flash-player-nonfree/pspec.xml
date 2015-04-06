@@ -14,7 +14,7 @@
             By using this package, you accept the terms and conditions set in the end-user license agreement: http://www.adobe.com/products/eulas/players/flash/
         </Description>
         <License>AdobeFlash-12.2.202.297</License>
-        <Archive sha1sum="b01c45e9ebd7eed6b9b4c6206529ca2575c80aab" type="targz">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.438/install_flash_player_11_linux.x86_64.tar.gz</Archive>
+        <Archive sha1sum="729b5f9127df63c9af84163c9f7ffabc81012a75" type="targz">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.442/install_flash_player_11_linux.x86_64.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -29,6 +29,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>03-03-2015</Date>
+            <Version>11.2.202.442</Version>
+            <Comment>Update to 11.2.202.442</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>01-26-2015</Date>
             <Version>11.2.202.438</Version>

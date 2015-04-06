@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>perl-mime-base64</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings</Summary>
+        <Description xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>perl-mime-base64</Name>
+        <Summary xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings</Summary>
+        <Description xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings
+</Description>
+        <PartOf>programming.perl</PartOf>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/perl5/vendor_perl/5.20.1/x86_64-linux/auto/MIME/Base64</Path>
+            <Path fileType="library">/usr/lib/perl5/vendor_perl/5.20.1/x86_64-linux/MIME</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2015-03-11</Date>
+            <Version>3.15</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>

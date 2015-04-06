@@ -14,12 +14,19 @@ def setup():
 
     shelltools.cd (BuildDir)
 
+    # Because GCC is a dope.
+    cflags = get.CFLAGS().replace("-D_FORTIFY_SOURCE=2", "")
+    cxxflags = get.CXXFLAGS().replace("-D_FORTIFY_SOURCE=2", "")
+
+    shelltools.export("CFLAGS", cflags)
+    shelltools.export("CXXFLAGS", cxxflags)
+
     # Configure GCC
     shelltools.system ("%s/configure \
                         --prefix=/usr \
                         --with-pkgversion='Evolve OS' \
-                        --libdir=/usr/lib \
-                        --libexecdir=/usr/lib \
+                        --libdir=/usr/lib64 \
+                        --libexecdir=/usr/lib64 \
                         --with-system-zlib \
                         --enable-shared \
                         --enable-threads=posix \
@@ -31,7 +38,7 @@ def setup():
                         --enable-clocale=gnu \
                         --disable-multilib \
                         --enable-lto \
-                        --with-bugurl='http://bugs.evolve-os.com' \
+                        --with-bugurl='https://evolve-os.com/project' \
                         --with-arch_32=i686 \
                         --enable-linker-build-id  \
                         --build=%s \
@@ -52,3 +59,7 @@ def install():
     # Linky linky
     pisitools.dosym ("/usr/bin/cpp", "/lib/cpp")
     pisitools.dosym ("/usr/bin/gcc", "/usr/bin/cc")
+
+    crtfiles = ["libgcc.a", "crtbegin.o", "crtend.o", "crtbeginS.o", "crtendS.o"]
+    for crt in crtfiles:
+        pisitools.dosym("/usr/lib64/gcc/%s/%s/%s" % (get.HOST(), get.srcVERSION(), crt), "/usr/lib64/%s" % crt)

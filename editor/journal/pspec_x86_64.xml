@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>journal</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Journal text editor</Summary>
+        <Description xml:lang="en">A lightweight text-editor with sharing and customizing options.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>journal</Name>
+        <Summary xml:lang="en">Journal text editor</Summary>
+        <Description xml:lang="en">A lightweight text-editor with sharing and customizing options.
+</Description>
+        <PartOf>editor</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/glib-2.0/schemas/com.evolve-os.journal.gschema.xml</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications/journal.desktop</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2015-03-30</Date>
+            <Version>1.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>

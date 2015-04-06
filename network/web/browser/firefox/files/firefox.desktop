@@ -73,7 +73,5 @@ X-MultipleArgs=false
 Type=Application
 Icon=firefox
 Categories=Application;Internet;Network;WebBrowser;
-MimeType=text/html;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;
 StartupWMClass=Firefox
 StartupNotify=true
-

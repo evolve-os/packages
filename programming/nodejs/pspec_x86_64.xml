@@ -1,0 +1,294 @@
+<PISI>
+    <Source>
+        <Name>nodejs</Name>
+        <Homepage>http://nodejs.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary xml:lang="en">Node.js is a platform built on Chrome&apos;s JavaScript runtime for easily building fast, scalable network applications.</Summary>
+        <Description xml:lang="en">Javascript platform to make fast, scalable network application. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>nodejs-devel</Name>
+        <Summary xml:lang="en">Development files for nodejs</Summary>
+        <Description xml:lang="en">Javascript platform to make fast, scalable network application. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">nodejs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>nodejs</Name>
+        <Summary xml:lang="en">Node.js is a platform built on Chrome&apos;s JavaScript runtime for easily building fast, scalable network applications.</Summary>
+        <Description xml:lang="en">Javascript platform to make fast, scalable network application. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+</Description>
+        <PartOf>programming</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/systemtap/tapset/node.stp</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/lib/config</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/lib/utils</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/lib/utils/completion</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/lib/cache</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/bin</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/bin/node-gyp-bin</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/partial/doc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/partial/doc/files</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/partial/doc/api</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/partial/doc/misc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/partial/doc/cli</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/static</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/doc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/doc/files</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/doc/api</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/doc/misc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/html/doc/cli</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/scripts</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/doc/files</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/doc/api</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/doc/misc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/doc/cli</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/man/man1</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/man/man5</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/man/man3</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/man/man7</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sorted-object</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sorted-object/lib/sorted-object.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json/example</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json/example/init/basic-init.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/example</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/example/npm-init</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/cmd-shim</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/chownr</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/async-some</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/wcwidth</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/wcwidth/docs/index.md</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/wcwidth/node_modules/defaults</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/wcwidth/node_modules/defaults/node_modules/clone</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/strip-ansi</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/columnify/node_modules/strip-ansi/node_modules/ansi-regex</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/umask</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-install-checks</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npmlog</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/inherits</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/path-is-inside</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/path-is-inside/lib/path-is-inside.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fs-vacuum</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansistyles</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/minimatch</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/semver</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/semver/bin/semver</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/config-chain</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/config-chain/node_modules/proto-list</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/once</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/editor</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/editor/example</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/osenv</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/chmodr</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi/examples/cursorPosition.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi/examples/clear/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi/examples/beep/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansi/examples/progress/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/normalize-package-data</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/normalize-package-data/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/char-spinner</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/glob</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/which</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/which/bin/which</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/build/build.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/lib/util.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-package-arg</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/tar</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/tar/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/tar/examples</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/graceful-fs</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/rimraf</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read-installed</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read-installed/node_modules/readdir-scoped-modules</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read-installed/node_modules/util-extend</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read-installed/node_modules/debuglog</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/mkdirp</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/mkdirp/bin</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/mkdirp/examples/pow.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist/example/parse.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/nopt</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/nopt/lib/nopt.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/nopt/bin/nopt.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/nopt/examples/my-program.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/abbrev</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/dezalgo</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/dezalgo/node_modules/asap</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/text-table</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/text-table/example</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-user-validate</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/lockfile</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/write-file-atomic</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/inflight</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/github-url-from-username-repo</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/wrappy</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fs-write-stream-atomic</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/lru-cache</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/lru-cache/lib/lru-cache.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/examples/README.md</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/qs</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/qs/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/forever-agent</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/mime-types</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/mime-types/node_modules/mime-db</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/form-data</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/form_data.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/json-stringify-safe</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/asn1</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/tools</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/ctype/man/man3ctype/ctio.3ctype</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/isstream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/images</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/example/usage.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/hoek</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/hoek/images/hoek.png</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/hoek/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/sntp/examples</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/images/boom.png</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/caseless</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/aws-sign2</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/tough-cookie</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/tough-cookie/node_modules/punycode</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/node-uuid</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/node-uuid/bin/uuid</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/node-uuid/benchmark</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/stringstream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/bl</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/combined-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/combined-stream/lib/combined_stream.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/request/node_modules/oauth-sign</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read-package-json</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/slide</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/slide/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ansicolors</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/ini</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/realize-package-specifier</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream/examples</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/dist-tags</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/typedarray</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/typedarray/example/tarray.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/build/build.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is/lib/util.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/readable-stream/node_modules/string_decoder</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/npm-package-arg</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/npm-package-arg/node_modules/hosted-git-info</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/retry</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/retry/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/retry/example/dns.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/buildbot/buildbot_run.py</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/tools</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/tools/Xcode/README</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/tools/Xcode/Specifications</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/tools/emacs</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/tools/emacs/testdata</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/samples</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/data/win/large-pdb-shim.cc</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/node_modules/minimatch</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/node-gyp/node_modules/minimatch/node_modules/sigmund</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read/lib/read.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read/example/example.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/read/node_modules/mute-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/archy</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/archy/examples</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/block-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/block-stream/bench</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/npm-cache-filename</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/opener</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/child-process-close</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/github-url-from-git</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/uid-number</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream-npm</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream-npm/example</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream-npm/node_modules/fstream-ignore</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/fstream-npm/node_modules/fstream-ignore/example/basic.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/normalize-git-url</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/lib</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/node_modules/isarray</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/node_modules/isarray/build/build.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/node_modules/core-util-is</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/node_modules/core-util-is/lib/util.js</Path>
+            <Path fileType="library">/usr/lib/node_modules/npm/node_modules/sha/node_modules/readable-stream/node_modules/string_decoder</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2015-03-11</Date>
+            <Version>0.12.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>

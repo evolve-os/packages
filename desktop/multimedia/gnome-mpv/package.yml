@@ -1,0 +1,21 @@
+name       : gnome-mpv
+version    : 0.3
+release    : 1
+source     :
+    - https://github.com/gnome-mpv/gnome-mpv/archive/v0.3.tar.gz : 9e3c496bc20c793749b609c4508adad729206271f0f4f330f9cb65479fd9fd14
+license    : GPLv3
+summary    : GNOME frontend for MPV
+description: |
+    GNOME frontend for MPV
+builddeps  :
+    - pkgconfig(mpv)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(glib-2.0)
+setup      : |
+    autoreconf -sfi
+    intltoolize -c --automake
+    %configure --enable-debug
+build      : |
+    %make
+install    : |
+    %make_install

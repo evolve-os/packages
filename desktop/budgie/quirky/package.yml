@@ -1,0 +1,21 @@
+name        : quirky
+version     : 1
+release     : 3
+source      :
+    - https://evolve-os.com/sources/quirky-1.tar.xz : f98bce918452d7a393c1e5af24da79b58d71159e0f0cfb3041db02a95705a00e
+homepage    : https://github.com/evolve-os/quirky
+license     :
+    - GPLv2+
+summary     : WIP IRC Client
+builddeps   :
+    - pkgconfig(gtk+-3.0)
+    - vala
+description : |
+    WIP IRC Client
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
+    rm %installroot%/usr/bin/dummy-bot

@@ -1,0 +1,43 @@
+name       : mpv
+homepage   : http://mpv.io/
+version    : 0.8.2
+release    : 2
+source     :
+    - https://github.com/mpv-player/mpv/archive/v0.8.2.tar.gz : a565934bf668b24a946f192f06981664415bd991fd204454b85bb8f7978074a7
+license    : GPL-2.0
+summary    : mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.
+description: |
+    mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.
+    
+    MPlayer's options parser was improved to behave more like other CLI programs, and many option names and semantics were reworked to make them more intuitive and memorable.
+    
+    mpv has a OpenGL based video output that is capable of many features loved by videophiles, such as video scaling with popular high quality algorithms, color management, and more.
+    While mpv has no official GUI, it has a small controller that is triggered by mouse movement.
+    
+    mpv leverages the FFmpeg hwaccel APIs to support VDPAU, VAAPI and VDA video decode acceleration.
+builddeps:
+    - pkgconfig(vdpau)
+    - pkgconfig(libavcodec)
+    - pkgconfig(lcms2)
+    - pkgconfig(libpulse)
+    - pkgconfig(gl)
+    - pkgconfig(x11)
+    - pkgconfig(libva-x11)
+    - pkgconfig(libbluray)
+    - pkgconfig(dvdread)
+    - pkgconfig(dvdnav)
+    - pkgconfig(lua-5.1)
+    - pkgconfig(libass)
+    - pkgconfig(libmpg123)
+    - pkgconfig(alsa)
+    - pkgconfig(xscrnsaver)
+    - pkgconfig(xv)
+    - pkgconfig(xinerama)
+    - pkgconfig(xrandr)
+setup      : |
+    ./bootstrap.py
+    ./waf configure --prefix=/usr --confdir=/etc/mpv --enable-libmpv-shared
+build      : |
+    ./waf build
+install    : |
+    ./waf install --destdir="%installroot%"

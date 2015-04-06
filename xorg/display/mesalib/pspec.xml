@@ -16,6 +16,7 @@
         <Patches>
             <!-- Add the official demos -->
             <Patch level="1">MesaLib-10.2.4-add_xdemos-1.patch</Patch>
+            <Patch level="1">llvm_3_5.patch</Patch>
         </Patches>
 
         <BuildDependencies>
@@ -24,6 +25,8 @@
             <Dependency type="pkgconfig">x11</Dependency>
             <Dependency type="pkgconfig">glproto</Dependency>
             <Dependency type="pkgconfig">dri2proto</Dependency>
+            <Dependency type="pkgconfig">dri3proto</Dependency>
+            <Dependency type="pkgconfig">presentproto</Dependency>
             <Dependency type="pkgconfig">xext</Dependency>
             <Dependency type="pkgconfig">xdamage</Dependency>
             <Dependency type="pkgconfig">xfixes</Dependency>
@@ -34,7 +37,6 @@
             <Dependency>llvm-devel</Dependency>
             <Dependency>libelf-devel</Dependency>
         </BuildDependencies>
-
     </Source>
 
     <Package>
@@ -79,6 +81,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>02-02-2015</Date>
+            <Version>10.2.4</Version>
+            <Comment>Sync with llvm</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>07-26-2014</Date>
             <Version>10.2.4</Version>

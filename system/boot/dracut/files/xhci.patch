@@ -1,0 +1,13 @@
+diff --git a/modules.d/90kernel-modules/module-setup.sh b/modules.d/90kernel-modules/module-setup.sh
+index 8388a08..dc02b11 100755
+--- a/modules.d/90kernel-modules/module-setup.sh
++++ b/modules.d/90kernel-modules/module-setup.sh
+@@ -36,7 +36,7 @@ installkernel() {
+         }
+ 
+         hostonly='' instmods sr_mod sd_mod scsi_dh ata_piix \
+-            ehci-hcd ehci-pci ehci-platform ohci-hcd uhci-hcd xhci-hcd hid_generic \
++            ehci-hcd ehci-pci ehci-platform ohci-hcd uhci-hcd xhci-hcd xhci-hcd xhci-pci xhci-plat-hcd hid_generic \
+             unix
+ 
+         instmods yenta_socket scsi_dh_rdac scsi_dh_emc \

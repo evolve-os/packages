@@ -61,3 +61,12 @@ def get_sha256sum (filename):
 		
 		return ret
 
+def get_sha1sum (filename):
+		sh = hashlib.sha1 ()
+		f = open (filename, "r")
+		sh.update (f.read())
+		ret = sh.hexdigest ()
+		f.close ()
+		
+		return ret
+

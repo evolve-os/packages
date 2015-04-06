@@ -1,0 +1,18 @@
+name       : baobab
+version    : 3.14.1
+release    : 1
+source     :
+    - http://ftp.vim.org/pub/windowing/gnome/sources/baobab/3.14/baobab-3.14.1.tar.xz : 76966521858f3c46fedbf38deb8f9847737ef0bc3c5f330c51d1feb68a711d17
+license    : GPL-2
+builddeps  :
+    - itstool
+    - pkgconfig(gtk+-3.0)
+summary    : A graphical directory tree analyzer
+description: |
+    A graphical directory tree analyzer
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install

@@ -11,7 +11,7 @@
         <Summary>IO::Socket::SSL -- Nearly transparent SSL encapsulation for IO::Socket::INET</Summary>
         <Description>IO::Socket::SSL -- Nearly transparent SSL encapsulation for IO::Socket::INET</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="122b2dc0a5f44b4c843375b9e37159847c1d5127" type="targz">http://search.cpan.org/CPAN/authors/id/B/BE/BEHROOZI/IO-Socket-SSL-0.97.tar.gz</Archive>
+        <Archive sha1sum="f777869e279eb94c6a5cde7b3fe90705ec042857" type="targz">http://search.cpan.org/CPAN/authors/id/S/SU/SULLR/IO-Socket-SSL-2.012.tar.gz</Archive>
 
         <BuildDependencies>
             <Dependency>perl</Dependency>
@@ -31,6 +31,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>03-11-2015</Date>
+            <Version>2.012</Version>
+            <Comment>Update to 2.012</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>01-31-2015</Date>
             <Version>0.97</Version>

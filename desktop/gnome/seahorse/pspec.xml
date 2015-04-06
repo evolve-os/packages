@@ -11,7 +11,7 @@
         <Summary>GNOME encryption key and password manager</Summary>
         <Description>Seahorse is a GNOME application for managing encryption keys and passwords in the GnomeKeyring. There's also a collection of plugins that integrate seahorse with nautilus, gedit and other places for encryption, decryption and other operations.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="6d69fc24503844f5515abdee1499b5c53605c07e" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.12/seahorse-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="df86687c924eec40361adebb687d7067280a91f9" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/seahorse/3.14/seahorse-3.14.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -21,12 +21,14 @@
             <Dependency>gpgme-devel</Dependency>
             <Dependency>libassuan-devel</Dependency>
 
-            <!-- ssh-key-gen //-->
+            
             <Dependency>openssh</Dependency>
             <Dependency>gnupg</Dependency>
 
             <Dependency>itstool</Dependency>
         </BuildDependencies>
+
+        <SupportsClang>true</SupportsClang>
     </Source>
 
     <Package>
@@ -53,6 +55,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>03-15-2015</Date>
+            <Version>3.14.1</Version>
+            <Comment>Update to 3.14.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-18-2014</Date>
             <Version>3.12.2</Version>

@@ -1,0 +1,28 @@
+name       : evolution-data-server
+version    : 3.12.11
+release    : 1
+source     :
+    - http://ftp.gnome.org/pub/GNOME/sources/evolution-data-server/3.12/evolution-data-server-3.12.11.tar.xz : 59023d2cf92e36b69c1f83b2e56a0ba037754982a23cb06f35f6cc5de7a12201
+clang      : no
+license    : GPL-2.0
+summary    : Centralized access to appointments and contacts
+description: |
+    Centralized access to appointments and contacts
+builddeps  :
+    - pkgconfig(libical)
+    - pkgconfig(nspr)
+    - pkgconfig(nss)
+    - pkgconfig(icu-uc)
+    - pkgconfig(libsecret-unstable)
+    - pkgconfig(sqlite3)
+    - pkgconfig(libgdata)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gweather-3.0)
+    - gperf
+setup      : |
+    %configure --disable-static --disable-uoa
+build      : |
+    %make
+install    : |
+    %make_install
+    

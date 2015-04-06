@@ -1,0 +1,20 @@
+name       : libunique
+version    : 3.0.2
+release    : 1
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/libunique/3.0/libunique-3.0.2.tar.xz : a8f02ce073e2b920cca8ac45d418e7cb64438ad0814780c5912c6d63f8a4e038
+license    : LGPL-2.1
+summary    : A library for writing single instance applications
+description: |
+    A library for writing single instance applications
+builddeps  :
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(x11)
+    - pkgconfig(dbus-glib-1)
+setup      : |
+    %configure --disable-static
+build      : |
+    %make
+install    : |
+    %make_install

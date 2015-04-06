@@ -16,6 +16,10 @@
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-Switch-to-ext4.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -29,6 +33,7 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/polkit-1/actions</Path>
             <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="data">/etc/polkit-1/rules.d</Path>
             <Path fileType="data">/etc/skel/Desktop</Path>
             <Path fileType="config">/etc/os-installer</Path>
         </Files>
@@ -43,9 +48,28 @@
             <Dependency>python-gobject</Dependency>
             <Dependency>python-configobj</Dependency>
         </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/polkit-1/rules.d/10-livecd.rules">10-livecd.rules</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="12">
+            <Date>03-15-2015</Date>
+            <Version>1.1</Version>
+            <Comment>Add livecd rules</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="11">
+            <Date>03-09-2015</Date>
+            <Version>1.1</Version>
+            <Comment>Switch to ext4</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>01-25-2015</Date>
             <Version>1.1</Version>

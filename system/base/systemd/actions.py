@@ -16,7 +16,9 @@ def setup():
                           --disable-manpages \
                           --sysconfdir=/etc \
                           --with-sysvinit-path=/etc/init.d \
-                          --with-firmware-path=/lib/firmware \
+                          --disable-networkd \
+                          --disable-selinux \
+                          --enable-compat-libs \
                           --with-pamlibdir=/lib/security")
 
 def build():
@@ -44,11 +46,5 @@ def install():
     # Remove unwanted rpm macro
     pisitools.removeDir ("/usr/lib/rpm")
 
-
-    # Set defaults (enable readahead)
-    pisitools.dosym("/usr/lib/systemd/system/systemd-readahead-collect.service",
-                    "/usr/lib/systemd/system/default.target.wants/systemd-readahead-collect.service")
-
-    # Set defaults (enable readahead)
-    pisitools.dosym("/usr/lib/systemd/system/systemd-readahead-replay.service",
-                    "/usr/lib/systemd/system/default.target.wants/systemd-readahead-replay.service")
+    # We do not use nsswitch.conf - so don't break our networking.
+    pisitools.remove("/usr/share/factory/etc/nsswitch.conf")

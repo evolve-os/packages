@@ -12,7 +12,7 @@ def build():
 
 def install():
     autotools.rawInstall("-f client.mk install INSTALL_SDK= DESTDIR=%s" % get.installDIR())
-    pisitools.dosym("/usr/lib/thunderbird-31.4.0/chrome/icons/mozicon128.png",
+    pisitools.dosym("/usr/lib/thunderbird-31.5.0/chrome/icons/mozicon128.png",
                      "/usr/share/pixmaps/thunderbird.png")
     pisitools.dosym("/usr/lib/mozilla/plugins",
-                    "/usr/lib/thunderbird-31.4.0/plugins")
+                    "/usr/lib/thunderbird-31.5.0/plugins")

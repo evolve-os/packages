@@ -1,0 +1,25 @@
+From 4a91bb2042661946e9e4ce012b0e78c81e6d3bb2 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Mon, 9 Mar 2015 21:37:02 +0000
+Subject: [PATCH] Switch to ext4
+
+---
+ os_installer/installer.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/os_installer/installer.py b/os_installer/installer.py
+index 40cad32..a97948a 100644
+--- a/os_installer/installer.py
++++ b/os_installer/installer.py
+@@ -26,7 +26,7 @@ class InstallerEngine:
+         self.media1 = "/run/initramfs/live/LiveOS/squashfs.img"
+         self.media_type1 = "squashfs"
+         self.media2 = "/source1/LiveOS/rootfs.img"
+-        self.media_type2 = "ext2"      
++        self.media_type2 = "ext4"
+ 
+     def set_progress_hook(self, progresshook):
+         ''' Set a callback to be called on progress updates '''
+-- 
+1.8.4
+

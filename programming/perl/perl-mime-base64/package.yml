@@ -1,0 +1,18 @@
+name       : perl-mime-base64
+version    : 3.15
+release    : 2
+source     :
+    - http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/MIME-Base64-3.15.tar.gz : 7f863566a6a9cb93eda93beadb77d9aa04b9304d769cea3bb921b9a91b3a1eb9
+license    : GPL-2.0
+summary    : MIME::Base64 - Encoding and decoding of base64 strings
+
+description: |
+    MIME::Base64 - Encoding and decoding of base64 strings
+
+setup      : |
+    perl Makefile.PL PREFIX=/usr INSTALLDIRS=vendor DESTDIR=%installroot%
+build      : |
+    %make
+install    : |
+    %make_install
+    rm -rf %installroot%/usr/lib/perl5/5.20.1/

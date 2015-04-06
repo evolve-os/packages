@@ -10,7 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <Summary>Filesystem baselayout</Summary>
-        <Description>baselayout creates the Evolve OS main filesystem hierarchy.</Description>
+        <Description>baselayout creates the Solus main filesystem hierarchy.</Description>
         <Archive sha1sum="061245203282c8eb94d5d1b6358e4365cf998355" type="targz">http://evolve-os.com/sources/baselayout-1.6.tar.gz</Archive>
     </Source>
 
@@ -39,7 +39,7 @@
             <Path fileType="data" permanent="true">/var/lock</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/etc/evolveos-release">evolveos-release</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/solus-release">solus-release</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/os-release">os-release</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/services">services</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/protocols">protocols</AdditionalFile>
@@ -52,6 +52,22 @@
     </Package>
 
     <History>
+        <Update release="17">
+            <Date>04-02-2015</Date>
+            <Version>1.6</Version>
+            <Comment>Because.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="16">
+            <Date>15-03-2015</Date>
+            <Version>1.6</Version>
+            <Comment>Totally not a beta1.1 update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>01-24-2015</Date>
             <Version>1.6</Version>

@@ -232,8 +232,8 @@ description: |
             build = None
             install = None
 
+            totalStr += "\nbuilddeps  :\n"
             if self.build_deps is not None and len(self.build_deps) > 0:
-                totalStr += "\nbuilddeps  :\n"
                 for dep in self.build_deps:
                     if len(dep.name.strip()) == 0:
                         continue

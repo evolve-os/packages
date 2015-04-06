@@ -113,6 +113,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>03-08-2015</Date>
+            <Version>5.4.0</Version>
+            <Comment>Fix XKB config root</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>12-13-2014</Date>
             <Version>5.4.0</Version>

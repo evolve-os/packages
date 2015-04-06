@@ -1,0 +1,16 @@
+name       : libguess
+version    : 1.2
+release    : 2
+source     :
+    - http://rabbit.dereferenced.org/~nenolod/distfiles/libguess-1.2.tar.bz2 : 8019a16bdc7ca9d2efbdcc1429d48d033d5053d42e45fccea10abf98074f05f8
+license    : BSD-3-Clause
+summary    : libguess - a high-speed character set detection library
+description: |
+    libguess - a high-speed character set detection library
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install

@@ -22,6 +22,7 @@
         
         <Patches>
             <Patch level="1">security/cve-2013-0211.patch</Patch>
+            <Patch level="1">security/cve-2015-2304.patch</Patch>
         </Patches>
     </Source>
 
@@ -49,7 +50,36 @@
         </RuntimeDependencies>
     </Package>
 
+    <Package>
+        <Name>libarchive-bin</Name>
+        <Summary>libarchive binary utilities</Summary>
+        <Description>libarchive binary utilities</Description>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libarchive</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
     <History>
+        <Update release="5">
+            <Date>03-29-2015</Date>
+            <Version>3.1.2</Version>
+            <Comment>Enable binary utilities</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="4" type="security">
+            <Date>10-15-2014</Date>
+            <Version>3.1.2</Version>
+            <Comment>Address CVE-2015-2304</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3" type="security">
             <Date>10-15-2014</Date>
             <Version>3.1.2</Version>

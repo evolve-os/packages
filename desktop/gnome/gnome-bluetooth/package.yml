@@ -1,0 +1,19 @@
+name       : gnome-bluetooth
+version    : 3.14.0
+release    : 1
+source     :
+    - http://ftp.vim.org/pub/windowing/gnome/sources/gnome-bluetooth/3.14/gnome-bluetooth-3.14.0.tar.xz : e2ef5e0036748eeb4756e8cb57e9909f10b771d290086dd1f377451d3fe18b09
+license    : GPL, LGPL
+summary    : The GNOME Bluetooth Subsystem
+description: |
+    The GNOME Bluetooth Subsystem
+builddeps  :
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gdk-3.0)
+    - itstool
+setup      : |
+    %configure --disable-static
+build      : |
+    %make
+install    : |
+    %make_install

@@ -1,0 +1,18 @@
+name        : nodejs
+version     : 0.12.0
+release     : 2
+source      :
+    - http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz : 9700e23af4e9b3643af48cef5f2ad20a1331ff531a12154eef2bfb0bb1682e32
+homepage    : http://nodejs.org/
+clang       : no
+license     :
+    - MIT
+summary     : Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
+description : |
+    Javascript platform to make fast, scalable network application. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+setup      : |
+    ./configure --prefix=/usr
+build      : |
+    %make
+install    : |
+    %make_install

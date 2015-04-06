@@ -1,0 +1,58 @@
+<PISI>
+    <Source>
+        <Name>evopop-gtk-theme</Name>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <Summary xml:lang="en">A simple, flat and bold Gtk theme for Evolve OS &amp; Budgie Desktop</Summary>
+        <Description xml:lang="en">A simple, flat and bold Gtk theme for Evolve OS &amp; Budgie Desktop. Iris Dark was used as base.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>evopop-gtk-theme</Name>
+        <Summary xml:lang="en">A simple, flat and bold Gtk theme for Evolve OS &amp; Budgie Desktop</Summary>
+        <Description xml:lang="en">A simple, flat and bold Gtk theme for Evolve OS &amp; Budgie Desktop. Iris Dark was used as base.
+</Description>
+        <PartOf>desktop.theme</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/index.theme</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-2.0/gtkrc</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/metacity-1</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/unity</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/unity/modes</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/index.theme</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/metacity-1</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity/modes</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2015-04-06</Date>
+            <Version>0.23</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

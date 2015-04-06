@@ -5,7 +5,7 @@
         <Name>shadow</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>login and password tools</Summary>
         <Description>login and password tools</Description>
@@ -51,6 +51,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>03-09-2013</Date>
+            <Version>4.1.5.1</Version>
+            <Comment>Force bump</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>08-24-2013</Date>
             <Version>4.1.5.1</Version>

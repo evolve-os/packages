@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>git</Name>
@@ -10,7 +10,7 @@
         <Summary>fast, scalable, distributed revision control system </Summary>
         <Description>fast, scalable, distributed revision control system</Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="2a361a2d185b8bc604f7f2ce2f502d0dea9d3279" type="targz">http://git-core.googlecode.com/files/git-1.8.4.tar.gz</Archive>
+        <Archive sha1sum="c7b0550c34109752bd25c4cd2007908df689b603" type="tarxz">https://www.kernel.org/pub/software/scm/git/git-2.3.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>openssl-devel</Dependency>
@@ -34,12 +34,26 @@
             <Path fileType="data">/usr/share/bash-completion</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
+            <Dependency>perl-io-socket-ssl</Dependency>
+            <Dependency>perl-io</Dependency>
+            <Dependency>perl-net-ssleay</Dependency>
+            <Dependency>perl-net-smtp-ssl</Dependency>
+            <Dependency>perl-libnet</Dependency>
+            <Dependency>perl-error</Dependency>
+            <Dependency>perl-mime-base64</Dependency>
+            <Dependency>perl-authen-sasl</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>03-11-2015</Date>
+            <Version>2.3.2</Version>
+            <Comment>Update to 2.3.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>09-13-2013</Date>
             <Version>1.8.4</Version>
@@ -100,4 +114,3 @@
     </History>
 
 </PISI>
-
