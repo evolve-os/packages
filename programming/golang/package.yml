@@ -1,0 +1,23 @@
+name    : golang
+version : 1.4.2
+release : 1
+homepage: http://golang.org
+source :
+ - https://go.googlesource.com/go/+archive/go1.4.2.tar.gz : c2b58376ecee6871ace9bd95e9becdbff631cebabb8a476010fdcfa7342867ed
+license : MIT
+summary : The Go programming language.
+description : Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+build : |
+    ( cd $srcdir/src; ./make.bash )
+install : |
+    cd $srcdir
+    if [ ! -d "$installdir/usr/bin/" ]; then
+        mkdir -p $installdir/usr/bin/
+    fi
+    install -D -m 0755 $srcdir/bin/go $installdir/usr/bin/
+    install -D -m 0755 $srcdir/bin/gofmt $installdir/usr/bin/
+    if [ ! -d "$installdir/usr/share/go/" ]; then
+        mkdir -p $installdir/usr/share/go
+    fi
+    cp -R $srcdir/* $installdir/usr/share/go/
+
