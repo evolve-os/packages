@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>TLP</Name>
+        <Homepage>http://linrunner.de/tlp</Homepage>
+        <Packager>
+            <Name>Richard Fisher</Name>
+            <Email>richardfsr@gmail.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Advanced Power Management for Linux</Summary>
+        <Description xml:lang="en">Advanced Power Management for Linux
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>TLP</Name>
+        <Summary xml:lang="en">Advanced Power Management for Linux</Summary>
+        <Description xml:lang="en">Advanced Power Management for Linux
+</Description>
+        <Files>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/pm-utils</Path>
+            <Path fileType="library">/usr/lib/tlp-pm</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="config">/etc/init.d/tlp</Path>
+            <Path fileType="config">/etc/NetworkManager/dispatcher.d</Path>
+            <Path fileType="config">/etc/default/tlp</Path>
+            <Path fileType="config">/etc/acpi/thinkpad-radiosw.sh</Path>
+            <Path fileType="config">/etc/acpi/events</Path>
+            <Path fileType="data">/lib/udev/tlp-usb-udev</Path>
+            <Path fileType="data">/lib/udev/tlp-rdw-udev</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-10-11</Date>
+            <Version>0.8</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Richard Fisher</Name>
+            <Email>richardfsr@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
