@@ -1,0 +1,21 @@
+name    : audacity
+version : 2.1.0
+release : 1
+homepage: http://sourceforge.net/projects/audacity/
+source :
+ - https://github.com/audacity/audacity/archive/Audacity-2.1.0.zip : 27b3e7d47392e8f3a713b728d9264c785522425e6b2af7d74df80c5729f08af6
+license : GPL-2.0
+summary : Audacity
+builddeps :
+    - pkgconfig(gtk+-2.0)
+    - pkgconfig(gtk+-3.0)
+    - wxwidgets-devel
+description : Audacity
+clang: no
+setup : |
+    export CONFIG_SHELL=/bin/bash
+    %configure
+build : |
+    %make
+install : |
+    %make_install
