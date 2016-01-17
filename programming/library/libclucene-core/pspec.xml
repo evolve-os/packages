@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libclucene-core</Name>
+        <Homepage>http://clucene.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Packager>
+        <Summary>CLucene is a high-performance, scalable, cross platform, full-featured, open-source indexing and searching API.</Summary>
+        <Description>CLucene is a high-performance, scalable, cross platform, full-featured, open-source indexing and searching API.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="76d6788e747e78abb5abf8eaad78d3342da5f2a4" type="targz">http://downloads.sourceforge.net/project/clucene/clucene-core-unstable/2.3/clucene-core-2.3.3.4.tar.gz</Archive>
+
+    </Source>
+
+    <Package>
+        <Name>libclucene-core</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+        </Files>
+    </Package>
+    
+	<Package>
+		<Name>libclucene-devel</Name>
+		<Summary>Development files for libclucene-core</Summary>
+		<Description>Development files for libclucene-core</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/lib*.so</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="data">/usr/lib/pkgconfig</Path>
+			<Path fileType="data">/usr/lib/CLuceneConfig.cmake</Path>
+		</Files>
+		<RuntimeDependencies>
+			<Dependency release="current">libclucene-core</Dependency>
+		</RuntimeDependencies>
+	</Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-19-2014</Date>
+            <Version>2.3.3.4</Version>
+            <Comment>Add libclucene-core to repositories</Comment>
+            <Name>Greg Ryman</Name>
+            <Email>floss@gryman.com</Email>
+        </Update>
+    </History>
+</PISI>
