@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>bmon</Name>
+        <Homepage>https://github.com/tgraf/bmon/</Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>A command line based bandwidth monitor.</Summary>
+        <Description>A command line based bandwidth monitor.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="0b9d569c89702d1a6483691829ab0d2c48d849ed" type="targz">http://github.com/tgraf/bmon/archive/v3.5.tar.gz</Archive>
+
+        <BuildDependencies>
+		<Dependency type="pkgconfig">libconfuse</Dependency>
+		<Dependency>libnl-devel</Dependency>
+		<Dependency>ncurses</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>bmon</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-30-2014</Date>
+            <Version>3.5</Version>
+            <Comment>Add bmon to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

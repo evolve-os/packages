@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>screen</Name>
+        <Homepage>http://www.gnu.org/software/screen/</Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>Full-screen window manager that multiplexes a physical terminal</Summary>
+        <Description>Full-screen window manager that multiplexes a physical terminal</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="21eadf5f1d64120649f3390346253c6bc8a5103c" type="targz">http://ftp.gnu.org/gnu/screen/screen-4.2.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>screen</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-13-2014</Date>
+            <Version>4.2.1</Version>
+            <Comment>Add screen to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
