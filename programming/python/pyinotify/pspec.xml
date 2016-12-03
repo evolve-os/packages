@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pyinotify</Name>
+        <Homepage></Homepage>
+        <Packager>
+            <Name>Devon Bundy</Name>
+            <Email>devonbundy@gmail.com</Email>
+        </Packager>
+        <Summary>Pyinotify is a Python module for monitoring filesystems changes.</Summary>
+        <Description>Pyinotify relies on a Linux Kernel feature (merged in kernel 2.6.13) called inotify. inotify is an event-driven notifier, its notifications are exported from kernel space to user space through three system calls. pyinotify binds these system calls and provides an implementation on top of them offering a generic and abstract way to manipulate those functionalities.</Description>
+        <License>MIT</License>
+        <Archive sha1sum="c1c995a6fdd750768eec544021ebfbdf97e55aa8" type="targz">http://96.47.231.74/mirror/src/pyinotify/pyinotify-0.9.5.tar.gz</Archive>
+
+        <BuildDependencies>
+		<Dependency type="pkgconfig">python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pyinotify</Name>
+        <Files>
+            <Path fileType="data">/usr/lib/python2.7</Path>
+	    <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-29-2015</Date>
+            <Version>0.9.5</Version>
+            <Comment>Add  to repositories</Comment>
+            <Name>Devon Bundy</Name>
+            <Email>devonbundy@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
