@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>exiv2</Name>
+        <Homepage></Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>Add summary</Summary>
+        <Description>Add description</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="9dcaaefad130208166e000e0f32139573901bef4" type="targz">http://users.on.net/justin.zobel/exiv2-0.24.tar.gz</Archive>
+
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>exiv2</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/include/exiv2/</Path>
+            <Path fileType="data">/usr/share/doc/exiv2/</Path>
+            <Path fileType="data">/usr/lib/</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/</Path>
+            <Path fileType="man">/usr/man/man1/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-11-2014</Date>
+            <Version>0.24</Version>
+            <Comment>Add exiv2 to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
