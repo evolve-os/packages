@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>bamf</Name>
+        <Homepage>https://launchpad.net/bamf</Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>BAMF Application Matching Framework</Summary>
+        <Description>Removes the headache of applications matching into a simple DBus daemon and c wrapper library. Currently features application matching at amazing levels of accuracy (covering nearly every corner case).</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="4b496239fdc7a235370726b780f8ddbe8c86185b" type="targz">https://launchpad.net/bamf/0.5/0.5.0/+download/bamf-0.5.0.tar.gz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">glib-2.0</Dependency>
+            <Dependency type="pkgconfig">libwnck-3.0</Dependency>
+            <Dependency type="pkgconfig">libgtop-2.0</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">0001-fix-legacy-window-test.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+    <Name>bamf-devel</Name>
+        <Files>
+            <Path fileType="data">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>bamf</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>12-14-2014</Date>
+            <Version>0.5.0</Version>
+            <Comment>Add bamf to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
